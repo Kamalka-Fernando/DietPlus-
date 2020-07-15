@@ -1,0 +1,36 @@
+.left-text{
+    padding:320px 50px 240px 50px;
+    text-align:center;
+    font-size:50px;
+    font-weight:bolder;
+
+}
+.name{
+    margin:30px;
+    color:#E53935;
+}
+.logo
+{
+    display:block;
+    height: auto;
+    width: auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:5%;
+    margin-bottom:3%;
+}
+.right-text{
+    margin-left:5%;
+    margin-right:5%;
+    font-size:20px;
+    text-align:justify;
+}
+.disease-tab{
+    margin-left:30%;
+    margin-right:30%;
+    margin-bottom:2%;
+    padding:10px;
+    font-size:20px;
+    border-radius:20px;
+    text-align:center;
+}
