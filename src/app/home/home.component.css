@@ -1,0 +1,105 @@
+.buttonmain{
+  padding: 25px;
+  background-color: #02ee3d;
+  font-weight:bold;
+  color: #F44336;
+  border-color: white;
+  width: 300px;
+  border-radius:50px;
+}
+body
+{
+font-family: sans-serif;
+}
+
+.nametag
+{
+margin-top:100px;
+box-sizing: border-box;
+font-size: 4vw;
+
+}
+
+.nametagDiet{
+color: #E53935;
+font-weight: bold;
+float:right;
+padding:30px 10px 30px 10px;
+}
+
+.nametagPlus{
+color: #FFF;
+padding:30px 10px 30px 10px;
+}
+
+.nametago{
+color: #E53935;
+font-weight: bold;
+float:right;
+padding:30px 0px 30px 10px;
+}
+.minor-text-two{
+font-size:25px;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+.text-inform{
+font-size:15px;
+width:50%;
+text-align:justify;
+}
+
+#svg-hey{
+animation: lone 35s infinite ease-out;
+}
+#circle{
+animation: circles 10s infinite linear;
+}
+#mail{
+animation: mails 10s infinite linear;
+}
+@keyframes svg-hey{
+from{
+transform:skewX(0deg);
+}
+to{
+transform: skewX(10deg);
+}
+}
+@keyframes lone{
+from{
+transform:skewX(0deg);
+}
+to{
+transform: skewX(30deg);
+}
+}
+@keyframes circles{
+from{
+transform:skewX(0deg);
+}
+to{
+transform: skewX(60deg);
+}
+}
+@keyframes mails{
+0%{
+transform:translateX(0deg);
+}
+100%{
+transform: translate(100px, 300px);
+}
+}
+
+#man{
+animation: man-img 10s infinite linear;
+}
+@keyframes man-img{
+0%{
+transform:translateX(0deg);
+}
+100%{
+transform: translateX(100px);
+}
+}

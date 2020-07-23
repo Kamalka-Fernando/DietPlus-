@@ -1,14 +1,27 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-6 col-sm-12 col-xm-12">
-      <div class="container">
-
+<div class="wrapper" style="background-image: url('/assets/images/background.jpg');background-size:cover;">
+  <div class="inner">
+    <form action="">
+    
+      <h3>Login Form</h3>
+      <div class="form-wrapper">
+        <label for="">Email</label>
+        <input type="text" class="form-control">
       </div>
-    </div>
-    <div class="col-md-6 col-sm-12 col-xm-12">
-      <div class="container">
-
+      <div class="form-wrapper">
+        <label for="">Password</label>
+        <input type="password" class="form-control">
       </div>
-    </div>
+      <div class="checkbox">
+      </div>
+
+      <button (click)="getPosts()">Login Now</button>
+      {{ post | async | json}}
+      <button (click)="createPosts()">Login Post</button>
+      <br/>
+      {{ newPost | async | json}}
+      <!-- <div *ngFor="let post of posts | async">
+        {{ post | json }}
+      </div> -->
+    </form>
   </div>
 </div>

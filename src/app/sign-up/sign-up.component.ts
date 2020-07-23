@@ -1,15 +1,21 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent {
 
-  constructor() { }
+  readonly ROOT_URL = 'https://jsonplaceholder.typicode.com';
 
-  ngOnInit(): void {
+  posts: any;
+  
+  constructor( private http: HttpClient ) { }
+
+  getPosts(){
+    this.posts = this.http.get(this.ROOT_URL + '/posts')
   }
 
 }

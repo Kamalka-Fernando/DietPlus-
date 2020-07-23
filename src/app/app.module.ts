@@ -17,7 +17,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-
+import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     ContactUsComponent,
     FooterComponent,
     SignInComponent,
-    SignUpComponent
+    SignUpComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +41,8 @@ import { SignUpComponent } from './sign-up/sign-up.component';
     NgxPageScrollModule,
     MatFormFieldModule,
     MatButtonModule,
-    MatSelectModule
+    MatSelectModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
