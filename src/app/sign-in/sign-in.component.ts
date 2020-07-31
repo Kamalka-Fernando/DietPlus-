@@ -2,10 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Post } from './login';
 import { Observable } from 'rxjs';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/catch';
-import 'rxjs/add/operator/retry';
-import 'rxjs/add/operator/of';
+
 
 @Component({
   selector: 'app-sign-in',
@@ -21,29 +18,25 @@ export class SignInComponent {
 
   constructor( private http: HttpClient ) { }
 
+  // tslint:disable-next-line: typedef
   getPosts(){
 
     let headers = new HttpHeaders().set('Authorization', 'auth-token')
 
     this.posts = this.http.get(this.ROOT_URL + '/foo', { headers });
-    .retry(3)
-    .catch(err => {
-      console.log(err)
-      return Observable.of(err)
-    })
+
   }
 
   createPosts(){
     const data:Post = {
       id:null,
-      userId: 23,
+      userid: 23,
       title: 'My new post',
       body: 'Hello world!'
     }
 
     this.newPost = this.http.post(this.ROOT_URL + '/posts', data)
 
-    .map(post => post.title)
   }
 }
 

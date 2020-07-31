@@ -1,7 +1,7 @@
 <div class="wrapper" style="background-image: url('/assets/images/background.jpg');background-size:cover;">
   <div class="inner">
     <form action="">
-    
+
       <h3>Login Form</h3>
       <div class="form-wrapper">
         <label for="">Email</label>
@@ -15,7 +15,7 @@
       </div>
 
       <button (click)="getPosts()">Login Now</button>
-      {{ post | async | json}}
+      {{ posts | async | json}}
       <button (click)="createPosts()">Login Post</button>
       <br/>
       {{ newPost | async | json}}
