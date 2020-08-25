@@ -8,6 +8,7 @@ import { CustomerSectionComponent } from './customer-section/customer-section.co
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { DietplanComponent } from './dietplan/dietplan.component';
 
 const routes: Routes = [
 
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'Customer-section', component: CustomerSectionComponent },
   { path: 'ContactUs', component: ContactUsComponent },
   { path: 'Footer', component: FooterComponent },
-  { path: '', component: HomeComponent}
+  { path: '', component: HomeComponent },
+  { path: 'Dietplan', component: DietplanComponent}
 
 ];
 

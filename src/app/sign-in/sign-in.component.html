@@ -1,8 +1,9 @@
 <div class="wrapper" style="background-image: url('/assets/images/background.jpg');background-size:cover;">
   <div class="inner">
-    <form action="">
+    <form [formGroup]=" ">
 
       <h3>Login Form</h3>
+      <div class="form-group">
       <div class="form-wrapper">
         <label for="">Email</label>
         <input type="text" class="form-control">
@@ -22,6 +23,6 @@
       <!-- <div *ngFor="let post of posts | async">
         {{ post | json }}
       </div> -->
+    </div>
     </form>
-  </div>
 </div>

@@ -1,6 +1,7 @@
 <section class="container-fluid">
   <app-nav-bar></app-nav-bar>
 </section>
+<router-outlet></router-outlet>
 <section class="container-fluid pb-5" style="background-image: linear-gradient(rgba(238, 222, 222, 0.5), rgb(247, 245, 242,0.5)), url(assets/images/banner.jpg);
 background-size:cover;">
 
@@ -9,7 +10,7 @@ background-size:cover;">
 
       <div class="col-md-6 col-sm-12 col-xm-12 mt-5 text-center" >
 
-        <img src="assets/images/dietmore.png" style="margin-top:20%;"/>
+        <img src="assets/images/dietmore.png" style="margin-top:20%;" alt=" "/>
 
       </div>
       <div class="col-md-6 col-sm-12 col-xm-12" style="margin-top:20%;" >
@@ -40,10 +41,11 @@ background-size:cover;">
 <section class="container-fluid" id="aboutus">
   <app-aboutus></app-aboutus>
 </section>
-<video width="100%" height="500" autoplay loop>
+<video width="100%" height="500" controls loop preload="metadata" >
 <!-- "controls loop" can be used too -->
   <source src="assets/images/dietmore.mp4" type="video/mp4">
 </video>
+
 <section class="container-fluid" id="diseases">
   <app-diseases></app-diseases>
 </section>
