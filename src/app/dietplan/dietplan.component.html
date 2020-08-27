@@ -1,19 +1,27 @@
-<mat-horizontal-stepper class="m-5">
-  <mat-step label="Personal Details">
+<section >
+
+<mat-horizontal-stepper class="p-5" style="background-image: linear-gradient(rgba(225, 226, 226, 0.726), rgb(25, 0, 0,0.7)), url(assets/images/whatis.jpg);
+background-size:cover;">
+
+  <mat-step label="Personal Details" >
     <form [formGroup]=" ">
-      <label class="m-5"><img src="assets/images/team.png" width="40" height="40" style="margin-right:10px;"/>What is your Name?</label>
-      <input type="text" placeholder="Enter your first name and last name" /><br>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/height.png" width="40" height="40" style="margin-right:10px;"/>Enter your height?</label>
+    <h1>Fill your Personal Details</h1>
+      <label class="m-5"><img src="assets/images/team.png" width="40" height="40" alt="" style="margin-right:10px;"/>What is your Name?</label>
+      <input type="text" class="fullname"  placeholder="Enter your first name and last name" /><br>
+      <label class="ml-5 mr-5 mb-5"><img src="assets/images/height.png" width="40" height="40" alt="" style="margin-right:10px;"/>Enter your height?</label>
       <input type="text" placeholder="Enter your Height" />
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/weight.png" width="40" height="40" style="margin-right:10px;"/>Enter your weight?</label>
+      <label class="ml-5 mr-5 mb-5"><img src="assets/images/weight.png" width="40" height="40" alt="" style="margin-right:10px;"/>Enter your weight?</label>
       <input type="text" placeholder="Enter your Weight" /><br/>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/gmail.png" width="40" height="40" style="margin-right:10px;"/>Enter your Email Address?</label>
-      <input type="text" placeholder="Enter your Email Address" /><br>
-      <input class="btn btn-primary m-5" type="button" value="NEXT >>"/>
+      <label class="ml-5 mr-5 mb-5"><img src="assets/images/gmail.png" width="40" height="40" alt="" style="margin-right:10px;"/>Enter your Email Address?</label>
+      <input type="text" class="email" placeholder="Enter your Email Address" /><br>
+      <input class="btn btn-primary m-5" type="button" value="NEXT >>" />
     </form>
   </mat-step>
   <mat-step label="Disease Details">
-    ggg
+    
+      <mat-label>First name</mat-label>
+      <input matInput>
+   
   </mat-step>
   <mat-step label="">
     dfg
@@ -22,3 +30,4 @@
     ggg
   </mat-step>
 </mat-horizontal-stepper>
+</section>
