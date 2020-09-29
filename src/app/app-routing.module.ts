@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'Customer-section', component: CustomerSectionComponent },
   { path: 'ContactUs', component: ContactUsComponent },
   { path: 'Footer', component: FooterComponent },
-  { path: '', component: HomeComponent },
+  { path: '', component:HomeComponent  }, //wenas kara
   { path: 'Dietplan', component: DietplanComponent}
 
 ];

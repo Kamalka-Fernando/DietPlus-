@@ -6,13 +6,13 @@ const app = express();
 const posts = require('./server/routes/posts');
 
 //Using middleware
-app.use(express.static(path.join(__dirname,`src`)));
+app.use(express.static(path.join(__dirname,`dist/dietplusplus`)));
 
 app.use('/posts', posts);
 
 //catch all other routes request and return it to the index
 app.get('*', (req, res)=>{
-    res.sendFile(path.join(__dirname, `src/index.html`))
+    res.sendFile(path.join(__dirname, `dist/dietplusplus/index.html`))
 });
 
 
