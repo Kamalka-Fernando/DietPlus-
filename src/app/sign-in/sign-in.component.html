@@ -1,4 +1,48 @@
-<div class="wrapper" style="background-image: url('/assets/images/background.jpg');background-size:cover;">
+ <div class="container">
+   <div class="forms-container">
+     <div class="signin-signup">
+       <form class="sign-in-form" [formGroup]=" ">
+         <h2 class="title">Sign In</h2>
+         <div class="input-field">
+          <em class="fa fa-envelope"></em>
+          <input type="text" class="form-control" placeholder="Email">
+         </div>
+         <div class="input-field">
+          <em class="fa fa-lock"></em>
+          <input type="password" class="form-control" placeholder="Password">
+       </div>
+       <input type="submit" value="Sign In" class="btn solid">
+
+       <p class="social-text">Or Sign in with social platforms</p>
+       <div class="social-media">
+         <a href="#" class="social-icon">
+           <em class="fa fa-facebook"></em>
+         </a>
+         <a href="#" class="social-icon">
+          <em class="fa fa-twitter"></em>
+        </a>
+        <a href="#" class="social-icon">
+          <em class="fa fa-google"></em>
+        </a>
+       </div>
+       </form>
+     </div>
+   </div>
+   <div class="panels-container">
+     <div class="panel left-panel">
+       <div class="content">
+         <h3>New User</h3>
+         <p>fdgjhgfddg  ewrheh ewrhgfd fdgjhgfddg  ewrheh ewrhgfd fdgjhgfddg  ewrheh ewrhgfd</p>
+         <button class="btn transparent" id="sign-up-btn" routerLink="/Signup">Sign up</button>
+       </div>
+       <img src="assets/svg/login.svg" alt="" class="image">
+     </div>
+     
+   </div>
+ </div>
+
+
+<!-- <div class="wrapper" style="background-image: url('/assets/images/background.jpg');background-size:cover;">
   <div class="inner">
     <form [formGroup]=" ">
 
@@ -15,14 +59,10 @@
       <div class="checkbox">
       </div>
 
-      <button (click)="getPosts()">Login Now</button>
-      {{ posts | async | json}}
-      <button (click)="createPosts()">Login Post</button>
+      <button>Login Now</button>
+
       <br/>
-      {{ newPost | async | json}}
-      <!-- <div *ngFor="let post of posts | async">
-        {{ post | json }}
-      </div> -->
-    </div>
+      </div>
     </form>
 </div>
+</div>  -->

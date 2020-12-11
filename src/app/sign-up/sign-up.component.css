@@ -1,3 +1,225 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body, input{
+  /* font-family: ; */
+}
+
+.signin-signup{
+position: absolute;
+top:50%;
+left:75%;
+transform: translate(-50%, -50%);
+width: 50%;
+display: grid;
+grid-template-columns: 1fr;
+z-index: 5;
+}
+
+
+.container{
+position: relative;
+width: 100%;
+min-height:100vh;
+background-color: #fff;
+overflow: hidden;
+}
+
+.container:before{
+content: '';
+position: absolute;
+width: 2000px;
+height: 2000px;
+border-radius: 50%;
+background: linear-gradient(-45deg, #c51a1a, #d11515);
+top: -10%;
+right: 48%;
+transform: translateY(-50%);
+z-index: 6;
+}
+
+.forms-container{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+}
+
+form{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+padding: 0 5rem;
+overflow: hidden;
+grid-column: 1 / 2;
+grid-row: 1 / 2;
+}
+
+form.sign-up-form{
+z-index: 2;
+}
+
+
+.title{
+font-size: 2.2rem;
+color: #444;
+margin-bottom: 10px;
+}
+
+.input-field{
+max-width: 380px;
+width:100%;
+height: 50px;
+background-color: #f0f0f0;
+margin: 10px;
+border-radius: 55px;
+display: grid;
+grid-template-columns: 15% 75%;
+padding:0.4rem;
+}
+
+.input-field em{
+text-align: center;
+line-height: 45px;
+color: #acacac;
+font-size: 1.1rem;
+}
+
+.input-field input{
+background: none;
+outline: none;
+border: none;
+line-height: 1;
+font-weight: 600;
+font-size: 1.1rem;
+color: #333;
+}
+
+.input-field input::placeholder{
+color: #aaa;
+font-weight: 500;
+}
+
+.btn{
+width: 150px;
+height: 49px;
+border: none;
+outline: none;
+border-radius: 49px;
+cursor: pointer;
+background-color:#f32121;
+color: white;
+text-transform: uppercase;
+font-weight: 600;
+margin: 10px 0;
+transition: .5s;
+}
+
+.btn:hover{
+background-color: #690606;
+}
+
+.social-text{
+padding: .7rem 0;
+font-size: 1rem;
+}
+
+.social-media{
+display: flex;
+justify-content: cener;
+}
+
+.social-icon{
+height: 46px;
+width: 46px;
+border: 1px solid #333;
+margin: 0 0.45rem;
+display: flex;
+justify-content: center;
+align-items: center;
+text-decoration: none;
+color: #333;
+font-size: 1.1rem;
+border-radius: 50%;
+transition: 0.3s;
+}
+
+.social-icon:hover{
+color: #f32121;
+border-color:  #f32121;
+}
+
+.panels-container{
+position: absolute;
+width: 100%;
+height: 100%;
+top: 0;
+left: 0;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+
+.panel{
+display: flex;
+flex-direction: column;
+align-items:flex-end;
+justify-content: space-around;
+text-align: center;
+z-index: 7;
+}
+
+
+.left-panel{
+  pointer-events: all;
+  padding: 3rem 17% 2rem 12%;
+}
+
+.right-panel{
+pointer-events: none;
+padding: 3rem 12% 2rem 17%;
+}
+
+.panel .content{
+color: #fff;
+}
+
+.panel h3{
+font-weight: 500;
+line-height: 1;
+font-size:1.5rem;
+}
+
+.panel p{
+font-size: 0.95rem;
+padding: 0.7rem 0;
+}
+
+.btn.transparent{
+margin: 0;
+background: none;
+border: 2px solid #fff;
+width: 130px;
+height: 41px;
+font-weight: 600;
+font-size: .8rem;
+}
+
+.image{
+width: 100%
+}
+
+.right-panel .content, .right-panel .image{
+transform: translateX(800px);
+}
+
+
+
+
 /* @font-face {
     font-family: "Muli-Regular";
     src: url("../fonts/muli/Muli-Regular.ttf"); }
@@ -7,51 +229,51 @@
   @font-face {
     font-family: "Muli-Bold";
     src: url("../fonts/muli/Muli-Bold.ttf"); } */
-  * {
+/*   * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box; }
-  
+
   body {
     font-family: "Muli-Regular";
     color: #666;
     font-size: 13px;
     margin: 0; }
-  
+
   input, textarea, select, button {
     font-family: "Muli-Regular";
     color: #333;
     font-size: 13px; }
-  
+
   p, h1, h2, h3, h4, h5, h6, ul {
     margin: 0; }
-  
+
   img {
     max-width: 100%; }
-  
+
   ul {
     padding-left: 0;
     margin-bottom: 0; }
-  
+
   a:hover {
     text-decoration: none; }
-  
+
   :focus {
     outline: none; }
-  
+
   .wrapper {
     min-height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center; }
-  
+
   .inner {
     min-width: 850px;
     margin: auto;
     padding-top: 68px;
     padding-bottom: 48px;
-    background-image: url('/assets/images/white.jpg'); 
+    background-image: url('/assets/images/white.jpg');
     background-size: cover;
   }
     .inner h3 {
@@ -62,24 +284,24 @@
       margin-bottom: 32px;
       color: #333;
       letter-spacing: 2px; }
-  
+
   form {
     width: 50%;
     padding-left: 45px; }
-  
+
   .form-group {
     display: flex; }
     .form-group .form-wrapper {
       width: 50%; }
       .form-group .form-wrapper:first-child {
         margin-right: 20px; }
-  
+
   .form-wrapper {
     margin-bottom: 17px; }
     .form-wrapper label {
       margin-bottom: 9px;
       display: block; }
-  
+
   .form-control {
     border: 1px solid #ccc;
     display: block;
@@ -91,7 +313,7 @@
     background: none; }
     .form-control:focus {
       border: 1px solid #ae3c33; }
-  
+
   select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -99,7 +321,7 @@
     padding-left: 20px; }
     select option[value=""][disabled] {
       display: none; }
-  
+
   button {
     border: none;
     width: 152px;
@@ -150,7 +372,7 @@
       transform: scaleX(1);
       -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
       transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
-  
+
   .checkbox {
     position: relative; }
     .checkbox label {
@@ -162,7 +384,7 @@
       cursor: pointer; }
     .checkbox input:checked ~ .checkmark:after {
       display: block; }
-  
+
   .checkmark {
     position: absolute;
     top: 50%;
@@ -184,7 +406,7 @@
       transform: translate(-50%, -50%);
       display: none;
       content: '\f26b'; }
-  
+
   @media (max-width: 991px) {
     .inner {
       min-width: 768px; } }
@@ -194,11 +416,10 @@
       background: none;
       padding-top: 0;
       padding-bottom: 0; }
-  
+
     form {
       width: 100%;
       padding-right: 15px;
-      padding-left: 15px; } }
-  
+      padding-left: 15px; } } */
+
   /*# sourceMappingURL=style.css.map */
-  

@@ -1,8 +1,8 @@
-<section class="container-fluid">
+
   <app-nav-bar></app-nav-bar>
-</section>
+
 <router-outlet></router-outlet>
-<section class="container-fluid pb-5" style="background-image: linear-gradient(rgba(238, 222, 222, 0.5), rgb(247, 245, 242,0.5)), url(assets/images/banner.jpg);
+<section class="container-fluid pb-5" style="background-image: linear-gradient(rgb(255, 255, 255), rgb(247, 245, 242,0.5)), url(assets/images/banner.jpg);
 background-size:cover;">
 
   <div class="container-fluid" >
@@ -41,16 +41,18 @@ background-size:cover;">
 <section class="container-fluid" id="aboutus">
   <app-aboutus></app-aboutus>
 </section>
-<video width="100%" height="500" controls loop preload="metadata" >
+<section class="container ">
+<video width="100%" height="500" controls loop preload="metadata" class="mt-5">
 <!-- "controls loop" can be used too -->
   <source src="assets/images/dietmore.mp4" type="video/mp4">
 </video>
-
-<section class="container-fluid" id="diseases">
+</section>
+<section class="container-fluid pt-5 pb-5" id="diseases" style="background-image: linear-gradient(rgb(255, 255, 255),rgb(247, 245, 242,0.5)), url(assets/images/user.jpg);
+background-size:cover; ">
   <app-diseases></app-diseases>
 </section>
 
-<section class="container-fluid" id="customer-section" style="background-image: linear-gradient(rgba(245, 12, 12, 0.526), rgb(247, 245, 242,0.5)), url(assets/images/user.jpg);
+<section class="container-fluid" id="customer-section" style="background-image: linear-gradient(rgb(255, 255, 255),rgb(247, 245, 242,0.5)), url(assets/images/user.jpg);
 background-size:cover; ">
   <app-customer-section></app-customer-section>
 </section>

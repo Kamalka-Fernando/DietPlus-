@@ -15,7 +15,7 @@ export class SignUpComponent {
   constructor( private http: HttpClient ) { }
 
   getPosts(){
-    this.posts = this.http.get(this.ROOT_URL + '/posts')
+    this.posts = this.http.get(this.ROOT_URL + '/posts');
   }
 
 }

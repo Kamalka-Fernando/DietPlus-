@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Post } from './login';
 import { Observable } from 'rxjs';
@@ -21,21 +21,21 @@ export class SignInComponent {
   // tslint:disable-next-line: typedef
   getPosts(){
 
-    let headers = new HttpHeaders().set('Authorization', 'auth-token')
+    let headers = new HttpHeaders().set('Authorization', 'auth-token');
 
     this.posts = this.http.get(this.ROOT_URL + '/foo', { headers });
 
   }
 
   createPosts(){
-    const data:Post = {
-      id:null,
+    const data: Post = {
+      id: null,
       userid: 23,
       title: 'My new post',
       body: 'Hello world!'
-    }
+    };
 
-    this.newPost = this.http.post(this.ROOT_URL + '/posts', data)
+    this.newPost = this.http.post(this.ROOT_URL + '/posts', data);
 
   }
 }
