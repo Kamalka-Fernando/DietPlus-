@@ -22,6 +22,19 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DietplanComponent } from './dietplan/dietplan.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { LayoutModule } from '@angular/cdk/layout';
+import { NavigationComponent } from './navigation/navigation.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { NavDashComponent } from './nav-dash/nav-dash.component';
 
 
 @NgModule({
@@ -36,7 +49,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     SignInComponent,
     SignUpComponent,
     HomeComponent,
-    DietplanComponent
+    DietplanComponent,
+    UserDashboardComponent,
+    NavigationComponent,
+    SidebarComponent,
+    NavDashComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +65,17 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatSelectModule,
     MatStepperModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatIconModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatExpansionModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

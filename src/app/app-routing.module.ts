@@ -9,6 +9,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { DietplanComponent } from './dietplan/dietplan.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 const routes: Routes = [
 
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'ContactUs', component: ContactUsComponent },
   { path: 'Footer', component: FooterComponent },
   { path: '', component:HomeComponent  }, //wenas kara
-  { path: 'Dietplan', component: DietplanComponent}
+  { path: 'Dietplan', component: DietplanComponent},
+  { path: 'Dashboard', component: NavigationComponent}
 
 ];
 

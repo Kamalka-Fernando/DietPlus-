@@ -1,66 +1,160 @@
-<section >
-
-<mat-horizontal-stepper class="p-5" style="background-image: linear-gradient(rgba(225, 226, 226, 0.726), rgb(25, 0, 0,0.7)), url(assets/images/whatis.jpg);
-background-size:cover;">
-
-  <mat-step label="Personal Details" >
-    <form [formGroup]=" ">
-    <h1>Fill your Personal Details</h1>
-      <label class="m-5"><img src="assets/images/team.png" width="40" height="40" alt="" style="margin-right:10px;"/>What is your Name?</label>
-      <input type="text" class="fullname"  placeholder="Enter your first name and last name" />
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/height.png" width="40" height="40" alt="" style="margin-right:10px;"/>How old are you?</label>
-      <input type="text" placeholder="Enter your Age" /><br>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/height.png" width="40" height="40" alt="" style="margin-right:10px;"/>Enter your height?</label>
-      <input type="text" placeholder="Enter your Height" />
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/weight.png" width="40" height="40" alt="" style="margin-right:10px;"/>Enter your weight?</label>
-      <input type="text" placeholder="Enter your Weight" /><br/>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/gmail.png" width="40" height="40" alt="" style="margin-right:10px;"/>Enter your Email Address?</label>
-      <input type="text" class="email" placeholder="Enter your Email Address" /><br>
-      <input class="btn btn-primary m-5" type="button" value="NEXT >>" />
-    </form>
-  </mat-step>
-  <mat-step label="Disease Details">
-      <form [formGroup]=" ">
-    <h1>Fill your Disease Details</h1>
-      <label class="m-5"><img src="assets/images/team.png" width="40" height="40" alt="" style="margin-right:10px;"/>Select your disease</label>
-      <select style="padding:7px;">
-      <option>Select your Disease</option>
-      <option>Heart Disease</option>
-      <option>Gastritis</option>
-      <option>Diabates</option>
-      <option>Malnutrition</option>
-      </select><br>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/height.png" width="40" height="40" alt="" style="margin-right:10px;"/>Select the Medicines you consume</label>
-      <input type="checkbox" class="mr-2  " style="margin-right:10px;"><label>Heart Disease</label>
-      <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>
-      <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>
-      <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label><br>
-      <br>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/weight.png" width="40" height="40" alt="" style="margin-right:10px;"/>Enter other medicines you consume</label>
-      <input type="text" placeholder="Enter your Weight" /><br/>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/gmail.png" width="40" height="40" alt="" style="margin-right:10px;"/>Mention here any food allergies</label>
-      <input type="text" class="email" placeholder="Enter food allergies" /><br>
-      <input class="btn btn-primary m-5" type="button" value="NEXT >>" />
-    </form>
-  </mat-step>
-  <mat-step label="Food details">
-    <form [formGroup]=" ">
-    <h1>Fill your Food Details</h1>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/gmail.png" width="40" height="40" alt="" style="margin-right:10px;"/>Mention here any food allergies</label>
-      <input type="text" class="email" placeholder="Enter food allergies" /><br>
-      <label class="ml-5 mr-5 mb-5"><img src="assets/images/height.png" width="40" height="40" alt="" style="margin-right:10px;"/>Are you veg or non-veg</label>
-      <input type="radio" class="mr-2  " style="margin-right:10px;" required><label>Vegetarian</label>
-      <input type="radio" class="mr-2 ml-5 " style="margin-right:10px;" required><label>Non-Vegetarian</label><br>
-      <br>
-      <input class="btn btn-primary m-5" type="button" value="NEXT >>" />
-    </form>
-  </mat-step>
-  <mat-step label="Thank you" class="text-center" >
-    <h1  class="text-center" style="margin-top:15%;">Thank you for taking your time. Your weekly diet plan will be sent your email within an hour!!!
-    <br>
-    Check your mails<br>
-    Ready to be healthy!!!<br>
-  <input class="btn btn-primary m-5 text-center" type="button" value="VIEW YOUR DIET PLAN >>" /></h1>
-  </mat-step>
-</mat-horizontal-stepper>
+<section>
+  <mat-horizontal-stepper class="p-5" style="background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.7))">
+    <mat-step label="Personal Details" >
+      <div class="container-fluid">
+        <form [formGroup]=" ">
+          <div class="row">
+            <h1>Fill your personal details</h1>
+          </div>
+          <div class="row mt-5">
+            <div class="col-3">
+              <label class="ml-5 mb-5">
+                <img src="assets/images/human.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+                What is your Name?
+              </label>
+            </div>
+            <div class="col-3">
+                <input type="text" class="fullname"  placeholder="Enter your first name and last name" required/>
+            </div>
+            <div class="col-3">
+              <label class="ml-5">
+                <img src="assets/images/age.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+                How old are you?
+              </label>
+            </div>
+            <div class="col-3">
+              <input type="text" placeholder="Enter your Age" required/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <label class="ml-5 mr-5 mb-5">
+                <img src="assets/images/height1.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+                Enter your height?
+              </label>
+            </div>
+            <div class="col-3">
+              <input type="text" placeholder="Enter your Height" required/>
+            </div>
+            <div class="col-3">
+              <label class="ml-5 mr-5 mb-5">
+                <img src="assets/images/weight.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+                Enter your weight?
+              </label>
+            </div>
+            <div class="col-3">
+              <input type="text" placeholder="Enter your Weight" required/>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-3">
+              <label class="ml-5 mb-5">
+                <img src="assets/images/gmail.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+                Enter your Email Address?
+              </label>
+            </div>
+            <div class="col-3">
+              <input type="text" class="email" placeholder="Enter your Email Address" required/>
+            </div>
+            <div class="col-3"></div>
+            <div class="col-3"></div>
+          </div>
+          <div class="row">
+            <button mat-button matStepperNext class="btn btn-info ">Next >></button>
+          </div>
+        </form>
+      </div> 
+    </mat-step>
+    <mat-step label="Disease Details">
+      <div class="container-fluid">
+        <form [formGroup]=" " class="form">
+        <div class="row">
+          <h1>Fill your Disease Details</h1>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <label class="m-5">
+              <img src="assets/images/disease.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+              Select your disease
+            </label>
+          </div>
+          <div class="col-8 mt-5">
+            <select class="form-control" style="padding:7px;">
+              <option>Select your Disease</option>
+              <option>Heart Disease</option>
+              <option>Gastritis</option>
+              <option>Diabates</option>
+              <option>Malnutrition</option>
+              </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4">
+            <label class="ml-5 mr-5 mb-5">
+              <img src="assets/images/capsule.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+              Select the Medicines you consume
+            </label>
+          </div>
+          <div class="col-8 mt-3">
+            <input type="checkbox" class="mr-2  " style="margin-right:10px;"><label>Heart Disease</label>
+            <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>
+            <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>
+            <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>    
+          </div>
+        </div>
+        <div class="row">
+          <button mat-button matStepperPrevious class="btn btn-info mr-2">Back</button>
+          <button mat-button matStepperNext class="btn btn-info ">Next</button>
+        </div>
+        </form>
+      </div>
+    </mat-step>
+    <mat-step label="Food details">
+      <div class="container-fluid">
+          <form [formGroup]=" ">
+            <div class="row">
+              <h1>Fill your Food Details</h1>
+            </div>  
+            <div class="row">       
+              <div class="col-4">
+                <label class="m-5">
+                  <img src="assets/images/foodallergy.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+                  Mention here any food allergies
+                </label>
+              </div>
+              <div class="col-8 mt-5">
+                <input type="text" class="email" placeholder="Enter food allergies" />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                <label class="mr-5 ml-5 mb-5">
+                  <img src="assets/images/veg.png" width="40" height="40" alt="" style="margin-right:10px;"/>
+                  Are you veg or non-veg
+                </label>
+              </div>
+              <div class="col-8 mt-3">
+                <input type="radio" class= "mr-2" style="margin-right:10px;" required>
+                <label>Vegetarian</label>
+                <input type="radio" class= "mr-2 ml-5" style="margin-right:10px;" required>
+                <label>Non-Vegetarian</label><br>        
+              </div>
+            </div>
+            <div class="row">
+              <button mat-button matStepperPrevious class="btn btn-info mr-2">Back</button>
+              <button mat-button matStepperNext class="btn btn-info ">Next</button>
+            </div>
+          </form>
+      </div>
+    </mat-step>
+    <mat-step label="Thank you" class="text-center" >
+      <h1  class="text-center" style="margin-top:15%;">
+        Thank you for taking your time. Your weekly diet plan will be sent your email within an hour!!!
+        <br>
+        Check your mails<br>
+        Ready to be healthy!!!<br>
+        <input class="btn btn-info mt-5 text-center" type="button" value="VIEW YOUR DIET PLAN >>" />
+      </h1>
+    </mat-step>
+  </mat-horizontal-stepper>
 </section>
