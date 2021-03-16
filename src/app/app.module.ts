@@ -7,10 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSelectModule } from '@angular/material/select';
-import { MatStepperModule } from '@angular/material/stepper';
+
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { DiseasesComponent } from './diseases/diseases.component';
 import { CustomerSectionComponent } from './customer-section/customer-section.component';
@@ -23,6 +20,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { DietplanComponent } from './dietplan/dietplan.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { UserDashboardComponent } from './user-dashboard/user-dashboard.component';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';

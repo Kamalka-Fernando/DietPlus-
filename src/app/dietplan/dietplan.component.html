@@ -2,7 +2,7 @@
   <mat-horizontal-stepper class="p-5" style="background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.7))">
     <mat-step label="Personal Details" >
       <div class="container-fluid">
-        <form [formGroup]=" ">
+        <form [formGroup]="personalDetails" (ngSubmit)="submitPersonalDetails()">
           <div class="row">
             <h1>Fill your personal details</h1>
           </div>
@@ -14,7 +14,9 @@
               </label>
             </div>
             <div class="col-3">
-                <input type="text" class="fullname"  placeholder="Enter your first name and last name" required/>
+                <input type="text" class="form-control" formControlName="fullname" placeholder="Enter your first name and last name" required/>
+                <div class="alert alert-danger" *ngIf="personalDetails.controls['fullname'].touched && personalDetails.controls['fullname'].invalid">
+                  <i class="fa fa-exclamation-circle"></i><small class="ml-1">Please enter your name</small></div>
             </div>
             <div class="col-3">
               <label class="ml-5">
@@ -23,7 +25,9 @@
               </label>
             </div>
             <div class="col-3">
-              <input type="text" placeholder="Enter your Age" required/>
+              <input type="text" class="form-control" formControlName="age" placeholder="Enter your Age" required/>
+              <div class="alert alert-danger" *ngIf="personalDetails.controls['age'].touched && personalDetails.controls['age'].invalid">
+                <i class="fa fa-exclamation-circle"></i><small class="ml-1">Please enter your age</small></div>
             </div>
           </div>
           <div class="row">
@@ -34,7 +38,9 @@
               </label>
             </div>
             <div class="col-3">
-              <input type="text" placeholder="Enter your Height" required/>
+              <input type="number" class="form-control" formControlName="height" placeholder="Height in cm" required/>
+              <div class="alert alert-danger" *ngIf="personalDetails.controls['height'].touched && personalDetails.controls['height'].invalid">
+                <i class="fa fa-exclamation-circle"></i><small class="ml-1">Please enter your height</small></div>
             </div>
             <div class="col-3">
               <label class="ml-5 mr-5 mb-5">
@@ -43,7 +49,9 @@
               </label>
             </div>
             <div class="col-3">
-              <input type="text" placeholder="Enter your Weight" required/>
+              <input type="number" class="form-control" formControlName="weight" placeholder="Weight in Kg" required/>
+              <div class="alert alert-danger" *ngIf="personalDetails.controls['weight'].touched && personalDetails.controls['weight'].invalid">
+              <i class="fa fa-exclamation-circle"></i><small class="ml-1">Please enter your weight</small></div>
             </div>
           </div>
           <div class="row">
@@ -54,20 +62,25 @@
               </label>
             </div>
             <div class="col-3">
-              <input type="text" class="email" placeholder="Enter your Email Address" required/>
+              <input type="text" class="form-control" formControlName="email" placeholder="Enter your Email Address" required/>
+              <div class="alert alert-danger" *ngIf="personalDetails.controls['email'].touched && personalDetails.controls['email'].invalid">
+                <i class="fa fa-exclamation-circle"></i><small class="ml-1">Please enter your email address</small></div>
             </div>
             <div class="col-3"></div>
             <div class="col-3"></div>
           </div>
           <div class="row">
-            <button mat-button matStepperNext class="btn btn-info ">Next >></button>
+            <button matStepperNext class="btn btn-info" type="submit" [disabled]="!personalDetails.valid">Next >></button>
           </div>
         </form>
       </div> 
     </mat-step>
+
+
+
     <mat-step label="Disease Details">
       <div class="container-fluid">
-        <form [formGroup]=" " class="form">
+        <form [formGroup]="diseaseDetails" (ngSubmit)="submitDiseaseDetails()">
         <div class="row">
           <h1>Fill your Disease Details</h1>
         </div>
@@ -79,7 +92,7 @@
             </label>
           </div>
           <div class="col-8 mt-5">
-            <select class="form-control" style="padding:7px;">
+            <select class="form-control" formControlName="selectDisease" style="padding:7px;">
               <option>Select your Disease</option>
               <option>Heart Disease</option>
               <option>Gastritis</option>
@@ -96,22 +109,25 @@
             </label>
           </div>
           <div class="col-8 mt-3">
-            <input type="checkbox" class="mr-2  " style="margin-right:10px;"><label>Heart Disease</label>
-            <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>
-            <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>
-            <input type="checkbox" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>    
+            <input type="checkbox" formControlName="selectMedicine" class="mr-2  " style="margin-right:10px;"><label>Heart Disease</label>
+            <input type="checkbox" formControlName="selectMedicine" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>
+            <input type="checkbox" formControlName="selectMedicine" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>
+            <input type="checkbox" formControlName="selectMedicine" class="mr-2 ml-5 " style="margin-right:10px;"><label>Heart Disease</label>    
           </div>
         </div>
         <div class="row">
           <button mat-button matStepperPrevious class="btn btn-info mr-2">Back</button>
-          <button mat-button matStepperNext class="btn btn-info ">Next</button>
+          <button mat-button matStepperNext class="btn btn-info " type="submit" [disabled]="!diseaseDetails.valid">Next</button>
         </div>
         </form>
       </div>
     </mat-step>
     <mat-step label="Food details">
+
+
+
       <div class="container-fluid">
-          <form [formGroup]=" ">
+          <form [formGroup]="foodAllergies" (ngSubmit)="submitFoodAllergies()">
             <div class="row">
               <h1>Fill your Food Details</h1>
             </div>  
@@ -123,7 +139,7 @@
                 </label>
               </div>
               <div class="col-8 mt-5">
-                <input type="text" class="email" placeholder="Enter food allergies" />
+                <input type="text" formControlName="foodallergy" placeholder="Enter food allergies" />
               </div>
             </div>
             <div class="row">
@@ -134,9 +150,9 @@
                 </label>
               </div>
               <div class="col-8 mt-3">
-                <input type="radio" class= "mr-2" style="margin-right:10px;" required>
+                <input type="radio" class= "mr-2" formControlName="vegNon" style="margin-right:10px;" required>
                 <label>Vegetarian</label>
-                <input type="radio" class= "mr-2 ml-5" style="margin-right:10px;" required>
+                <input type="radio" class= "mr-2 ml-5" formControlName="vegNon" style="margin-right:10px;" required>
                 <label>Non-Vegetarian</label><br>        
               </div>
             </div>
@@ -153,7 +169,8 @@
         <br>
         Check your mails<br>
         Ready to be healthy!!!<br>
-        <input class="btn btn-info mt-5 text-center" type="button" value="VIEW YOUR DIET PLAN >>" />
+
+        <button class="btn btn-info mt-5 text-center p-3"><a routerLink="/Dashboard">VIEW YOUR DIET PLAN >></a></button>
       </h1>
     </mat-step>
   </mat-horizontal-stepper>

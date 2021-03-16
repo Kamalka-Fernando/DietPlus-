@@ -24,3 +24,15 @@ mat-horizontal-stepper{
 form,input,label{
   background-image:none;
 }
+.alert{
+  background-color: white;
+  border: none;
+}
+.alert-danger{
+  color: red;
+}
+
+button a{
+  color: white;
+  text-decoration: none;
+}
