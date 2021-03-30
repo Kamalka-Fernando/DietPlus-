@@ -1,16 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
-import { DiseasesComponent } from './diseases/diseases.component';
-import { CustomerSectionComponent } from './customer-section/customer-section.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
-import { DietplanComponent } from './dietplan/dietplan.component';
-import { NavigationComponent } from './navigation/navigation.component';
-
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { AboutusComponent } from './components/home/aboutus/aboutus.component';
+import { DiseasesComponent } from './components/home/diseases/diseases.component';
+import { CustomerSectionComponent } from './components/home/customer-section/customer-section.component';
+import { ContactUsComponent } from './components/home/contact-us/contact-us.component';
+import { FooterComponent } from './components/home/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { DietplanComponent } from './components/dietplan/dietplan.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 const routes: Routes = [
 
   { path: 'Signup', component: SignUpComponent },
@@ -22,7 +21,7 @@ const routes: Routes = [
   { path: 'Footer', component: FooterComponent },
   { path: '', component:HomeComponent  }, //wenas kara
   { path: 'Dietplan', component: DietplanComponent},
-  { path: 'Dashboard', component: NavigationComponent}
+  { path: 'Dashboard', component: DashboardComponent}
 
 ];
 

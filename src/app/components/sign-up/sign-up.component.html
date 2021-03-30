@@ -1,0 +1,94 @@
+<div class="container">
+  <div class="forms-container">
+    <div class="signin-signup">
+      <form class="sign-up-form" [formGroup]=" ">
+        <h2 class="title">Sign Up</h2>
+        <div class="input-field">
+           <em class="fa fa-user"></em>
+           <input type="text"  placeholder="First Name">
+        </div>
+        <div class="input-field">
+          <em class="fa fa-user"></em>
+          <input type="text"  placeholder="Last Name">
+       </div>
+       <div class="input-field">
+        <em class="fa fa-envelope"></em>
+        <input type="text"  placeholder="Email">
+       </div>
+        <div class="input-field">
+         <em class="fa fa-lock"></em>
+         <input type="password"  placeholder="Password">
+      </div>
+      <input type="submit" value="Sign Up" class="btn solid">
+
+      <p class="social-text">Or Sign in with social platforms</p>
+      <div class="social-media">
+        <a href="#" class="social-icon">
+          <em class="fa fa-facebook"></em>
+        </a>
+        <a href="#" class="social-icon">
+         <em class="fa fa-twitter"></em>
+       </a>
+       <a href="#" class="social-icon">
+         <em class="fa fa-google"></em>
+       </a>
+      </div>
+      </form>
+    </div>
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3>One of Us?</h3>
+          <p>fdgjhgfddg  ewrheh ewrhgfd fdgjhgfddg  ewrheh ewrhgfd fdgjhgfddg  ewrheh ewrhgfd</p>
+          <button class="btn transparent" id="sign-in-btn" routerLink="/Signin">Sign In</button>
+        </div>
+        <img src="assets/svg/launchred.svg" alt="" class="image">
+      </div>
+      
+    </div>
+  </div>
+
+
+
+<!--
+  <div class="wrapper" style="background-image: url('/assets/images/background.jpg');background-size:cover;">
+    <div class="inner">
+      <form  [formGroup]=" ">
+        <h3>Registration Form</h3>
+        <div class="form-group">
+          <div class="form-wrapper">
+            <label for="">First Name</label>
+            <input type="text" class="form-control">
+          </div>
+          <div class="form-wrapper">
+            <label for="">Last Name</label>
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-wrapper">
+          <label for="">Email</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-wrapper">
+          <label for="">Password</label>
+          <input type="password" class="form-control">
+        </div>
+        <div class="form-wrapper">
+          <label for="">Confirm Password</label>
+          <input type="password" class="form-control">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox"> I accept the Terms of Use & Privacy Policy.
+            <span class="checkmark"></span>
+          </label>
+        </div>
+        <button (click)="getPosts()">Register Now</button>
+
+      <div *ngFor = 'let post of posts | async'>
+        {{ post | json}}
+      </div>
+      </form>
+    </div>
+  </div>
+ -->
