@@ -1,23 +1,27 @@
 <div class="container">
   <div class="forms-container">
     <div class="signin-signup">
-      <form class="sign-up-form" [formGroup]=" ">
+      <form class="sign-up-form" #form="ngForm"  (submit)="submitRegisterDetails(form)">
         <h2 class="title">Sign Up</h2>
         <div class="input-field">
            <em class="fa fa-user"></em>
-           <input type="text"  placeholder="First Name">
+           <input type="text"  placeholder="First Name" name="firstname" 
+           class="form-control"  [(ngModel)]="service.registerData.firstname">
         </div>
         <div class="input-field">
           <em class="fa fa-user"></em>
-          <input type="text"  placeholder="Last Name">
+          <input type="text"  placeholder="Last Name" name="lastname"  
+          class="form-control"  [(ngModel)]="service.registerData.lastname">
        </div>
        <div class="input-field">
         <em class="fa fa-envelope"></em>
-        <input type="text"  placeholder="Email">
+        <input type="text"  placeholder="Email" name="email" 
+        class="form-control"  [(ngModel)]="service.registerData.email">
        </div>
         <div class="input-field">
          <em class="fa fa-lock"></em>
-         <input type="password"  placeholder="Password">
+         <input type="password"  placeholder="Password" name="password" 
+         class="form-control"  [(ngModel)]="service.registerData.password">
       </div>
       <input type="submit" value="Sign Up" class="btn solid">
 
@@ -40,7 +44,7 @@
         <div class="content">
           <h3>One of Us?</h3>
           <p>fdgjhgfddg  ewrheh ewrhgfd fdgjhgfddg  ewrheh ewrhgfd fdgjhgfddg  ewrheh ewrhgfd</p>
-          <button class="btn transparent" id="sign-in-btn" routerLink="/Signin">Sign In</button>
+          <button class="btn transparent" id="sign-in-btn" routerLink="/Signin" >Sign In</button>
         </div>
         <img src="assets/svg/launchred.svg" alt="" class="image">
       </div>

@@ -4,6 +4,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { SignInService } from 'src/app/services/sign-in.service';
 import { loginDetails } from 'src/app/services/sign-in.model';
 import { NgForm} from '@angular/forms';
+import { SignUpService } from 'src/app/services/sign-up.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -12,19 +13,16 @@ import { NgForm} from '@angular/forms';
 })
 export class SignInComponent {
 
-  constructor( private http: HttpClient, private fb: FormBuilder, public service:  SignInService) { }
+  constructor( private http: HttpClient, private fb: FormBuilder, public service:  SignInService, public serviceregister:SignUpService) { }
  
   submitLoginDetails(form:NgForm){
-    this.service.postLoginData()
-    .subscribe(
-      res =>{
-        this.service.refreshList()
-        this.resetForm(form);  
-      },
-      err =>{
-        console.log(' epa wenw waradi ne' +err);
-      }
-    )
+    if (this.service.loginData.email == this.serviceregister.registerData.email && 
+      this.service.loginData.password == this.serviceregister.registerData.password) {
+      alert('Correct login details')
+    } else {
+      console.error('ggg');
+      
+    }
   }
   
   resetForm(form:NgForm){

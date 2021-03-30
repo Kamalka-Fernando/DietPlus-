@@ -39,7 +39,7 @@ import { SideNavbarComponent } from './components/dashboard/side-navbar/side-nav
 import { HeadingNavbarComponent } from './components/dashboard/heading-navbar/heading-navbar.component';
 import { BodyDashboardComponent } from './components/dashboard/body-dashboard/body-dashboard.component';
 import { SignInService } from "./services/sign-in.service";
-
+import { SignUpService } from "./services/sign-up.service";
 
 @NgModule({
   declarations: [

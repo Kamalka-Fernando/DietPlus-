@@ -15,7 +15,6 @@ export class SignInService {
   list: loginDetails[]
 
   postLoginData(){
-    console.log("login ekt aawa")
     return this.http.post(this.baseUrl, this.loginData)
   }
 
@@ -24,6 +23,6 @@ export class SignInService {
     .subscribe(data=> {
      this.list = data as loginDetails[];
    })
-  }
+  } 
 
 }
