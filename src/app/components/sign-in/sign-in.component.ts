@@ -16,19 +16,17 @@ export class SignInComponent {
   constructor( private http: HttpClient, private fb: FormBuilder, public service:  SignInService, public serviceregister:SignUpService) { }
  
   submitLoginDetails(form:NgForm){
-    if (this.service.loginData.email == this.serviceregister.registerData.email && 
-      this.service.loginData.password == this.serviceregister.registerData.password) {
-      alert('Correct login details')
-    } else {
-      console.error('ggg');
+
+      const email = this.serviceregister.registerData.email
+      const password = this.serviceregister.registerData.password
+
       
-    }
+    
   }
   
   resetForm(form:NgForm){
     form.form.reset();
     this.service.loginData = new loginDetails();
-  } 
-   
+  }   
 }
 

@@ -23,7 +23,7 @@ export class SignUpComponent {
         this.resetForm(form);  
       },
       err =>{
-        console.log('err tmii enne epa wenw');
+        console.log('error!!! ');
       }
     )
   }

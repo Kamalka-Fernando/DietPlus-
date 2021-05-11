@@ -32,6 +32,8 @@
     "ng-zorro-antd": "^10.1.2",
     "ngx-page-scroll": "^7.0.3",
     "ngx-page-scroll-core": "^7.0.3",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "popper.js": "^1.16.1",
     "rxjs": "^6.6.3",
     "tslib": "^2.0.0",

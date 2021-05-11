@@ -19,9 +19,9 @@ export class SignUpService {
     return this.http.post(this.baseUrl, this.registerData)
   }
 
-  // getDeptDetail():Observable<any>{
-  //   return this.http.get(this.baseUrl)
-  // }
+  getDeptDetail():Observable<any>{
+    return this.http.get(this.baseUrl)
+  }
   refreshList(){
     return this.http.get(this.baseUrl)
     .subscribe(data=> {
