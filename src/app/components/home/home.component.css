@@ -19,59 +19,44 @@ font-family: sans-serif;
 }
 
 .minor-text-two{
-font-size:25px;
-margin-bottom:15px;
-font-weight:bold;
+  font-size:25px;
+  margin-bottom:15px;
+  width :fit-content;
+  font-weight:bold;
 }
 
 .text-inform{
-font-size:15px;
-width:50%;
-text-align:justify;
+  font-size:15px;
+  width:70%;
+  text-align:justify;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 550px) {
+  .buttonmain{
+    align-items:center;
+    margin: auto;
+  }
+  .minor-text-two{
+    font-size:large;
+    width :fit-content;
+    text-align: center;
+  }
+
+}
+@media only screen and (max-width: 1000px) {
   .text-inform{
-      width:100%;
-    }
-    .buttonmain{
-      align-items:center;
-    }
-}
-#svg-hey{
-animation: lone 25s infinite ease-out;
-}
-#circle{
-animation: circles 20s infinite linear;
+    width:100%;
+  }
+  .buttonmain{
+    align-items:center;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  .minor-text-two{
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
 }
 
 
-@keyframes lone{
-from{
-transform:skewX(0deg);
-}
-to{
-transform: skewX(30deg);
-}
-}
-@keyframes circles{
-from{
-transform:rotate(0deg);
-}
-to{
-transform: rotate(130deg);
-}
-}
-
-
-#man{
-animation: man-img 10s infinite linear;
-}
-@keyframes man-img{
-0%{
-transform:translateX(0deg);
-}
-100%{
-transform: translateX(100px);
-}
-}
