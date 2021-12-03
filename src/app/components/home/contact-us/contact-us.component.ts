@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import Swal from 'sweetalert2/dist/sweetalert2.js';
+
 
 @Component({
   selector: 'app-contact-us',
@@ -11,5 +13,13 @@ export class ContactUsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  clicked(){
+    Swal.fire({
+      title: 'Success!',
+      text: 'Mesaage Sent Successfully!',
+      icon: 'success',
+      timer: 1500
 
+    })
+}
 }

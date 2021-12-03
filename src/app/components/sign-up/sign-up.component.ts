@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { SignUpService } from 'src/app/services/sign-up.service';
 import { FormBuilder, NgForm} from '@angular/forms';
 import { registerDetails } from 'src/app/services/sign-up.model';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -20,17 +21,26 @@ export class SignUpComponent {
     .subscribe(
       res =>{
         this.service.refreshList()
-        this.resetForm(form);  
+        this.resetForm(form);
       },
       err =>{
         console.log('error!!! ');
       }
     )
   }
-  
+
   resetForm(form:NgForm){
     form.form.reset();
     this.service.registerData = new registerDetails();
-  } 
-   
+  }
+  signupbtn(){
+    Swal.fire({
+      icon: 'success',
+      title: 'Your Registration is Successfully Completed!',
+      showConfirmButton: false,
+      timer: 1500
+    })
+
+  }
+
 }

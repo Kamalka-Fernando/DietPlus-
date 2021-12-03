@@ -1,7 +1,7 @@
   <div class="container pt-5 pb-5">
-    <div class="row m-5" style="background-color: #ddf1ee;border-radius: 2%;">
+    <div class="row ">
       <div class="col-md-6 col-sm-12 col-xm-12" style="margin-bottom: 7%;">
-        <div class="row m-5">
+        <div class="row m-5" >
           <div class="col-md-10 col-sm-10 col-xm-10 ">
             <div class="container ">
             <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
@@ -29,28 +29,6 @@
             </div>
           </div>
         </div>
-        <div class="row m-5">
-            <div class="col-md-10 col-sm-10 col-xm-10">
-              <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-
-                <!-- Facebook -->
-                <a type="button" class="btn-floating btn-fb" href="https://www.facebook.com/CodeVoide/">
-                  <em class="fa fa-facebook"></em>
-                </a>
-                <!-- Twitter -->
-                <a type="button" class="btn-floating btn-tw" href="#">
-                  <em class="fa fa-twitter"></em>
-                </a>
-                <!-- Instagram-->
-                <a type="button" class="btn-floating btn-insta" href="#">
-                  <em class="fa fa-instagram"></em>
-                </a>
-                <!-- LinkedIn-->
-                <a type="button" class="btn-floating btn-in" href="#">
-                  <em class="fa fa-linkedin"></em>
-                </a>
-            </div>
-          </div>
         </div>
         <div class="col-md-5 col-sm-12 col-xm-12 mt-5">
         <div class="container">
@@ -65,7 +43,7 @@
               <textarea class="form-control" rows="3"></textarea>
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-info btn-sm">
+              <button type="submit" class="btn btn-info btn-sm" (click)="clicked()">
                 Submit
               </button>
               </div>

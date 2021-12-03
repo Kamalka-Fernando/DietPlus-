@@ -1,0 +1,28 @@
+.btn-floating
+{
+  margin: 5%;
+  font-size: 30px;
+  color:rgb(25, 90, 95);
+
+}
+.btn-fb{
+  margin-left: 0;
+}
+
+.btn-fb:hover{
+  color: rgb(34, 34, 116);
+}
+.btn-tw:hover{
+  color: rgb(43, 107, 247);
+}
+.btn-insta:hover{
+  color: rgb(228, 11, 76);
+}
+.btn-in:hover{
+  color: rgb(43, 83, 168);
+}
+@media only screen and (max-width: 550px) {
+
+
+
+}

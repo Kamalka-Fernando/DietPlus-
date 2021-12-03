@@ -1,29 +1,29 @@
 <div class="container">
   <div class="forms-container">
     <div class="signin-signup">
-      <form class="sign-up-form" #form="ngForm"  (submit)="submitRegisterDetails(form)">
+      <form class="sign-up-form col-sm-12" #form="ngForm"  (submit)="submitRegisterDetails(form)">
         <h2 class="title">Sign Up</h2>
         <div class="input-field">
            <em class="fa fa-user"></em>
-           <input type="text"  placeholder="First Name" name="firstname" 
+           <input type="text"  placeholder="First Name" name="firstname"
            class="form-control"  [(ngModel)]="service.registerData.firstname">
         </div>
         <div class="input-field">
           <em class="fa fa-user"></em>
-          <input type="text"  placeholder="Last Name" name="lastname"  
+          <input type="text"  placeholder="Last Name" name="lastname"
           class="form-control"  [(ngModel)]="service.registerData.lastname">
        </div>
        <div class="input-field">
         <em class="fa fa-envelope"></em>
-        <input type="text"  placeholder="Email" name="email" 
+        <input type="text"  placeholder="Email" name="email"
         class="form-control"  [(ngModel)]="service.registerData.email">
        </div>
         <div class="input-field">
          <em class="fa fa-lock"></em>
-         <input type="password"  placeholder="Password" name="password" 
+         <input type="password"  placeholder="Password" name="password"
          class="form-control"  [(ngModel)]="service.registerData.password">
       </div>
-      <input type="submit" value="Sign Up" class="btn solid">
+      <input type="submit" value="Sign Up" (click)="signupbtn()" routerLink="/Dietplan" class="btn solid">
 
       <p class="social-text">Or Sign in with social platforms</p>
       <div class="social-media">
@@ -43,12 +43,15 @@
       <div class="panel left-panel">
         <div class="content">
           <h3>One of Us?</h3>
-          <p>fdgjhgfddg  ewrheh ewrhgfd fdgjhgfddg  ewrheh ewrhgfd fdgjhgfddg  ewrheh ewrhgfd</p>
+          <p>Do you already have a DietMore Account <br>
+          Don't waste your time Sign In from below! <br>
+          Happy Dieting!!!
+          </p>
           <button class="btn transparent" id="sign-in-btn" routerLink="/Signin" >Sign In</button>
         </div>
         <img src="assets/svg/launchred.svg" alt="" class="image">
       </div>
-      
+
     </div>
   </div>
 

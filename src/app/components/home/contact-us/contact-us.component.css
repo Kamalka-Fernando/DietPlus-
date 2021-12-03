@@ -1,3 +1,4 @@
+
 .btn-floating
 {
   margin: 5%;
@@ -20,4 +21,9 @@
 }
 .btn-in:hover{
   color: rgb(43, 83, 168);
+}
+@media only screen and (max-width: 550px) {
+
+
+
 }

@@ -42,6 +42,7 @@ import { SignInService } from "./services/sign-in.service";
 import { SignUpService } from "./services/sign-up.service";
 
 @NgModule({
+
   declarations: [
     AppComponent,
     NavBarComponent,
@@ -57,7 +58,7 @@ import { SignUpService } from "./services/sign-up.service";
     DashboardComponent,
     SideNavbarComponent,
     HeadingNavbarComponent,
-    BodyDashboardComponent,
+    BodyDashboardComponent
 
   ],
   imports: [
@@ -81,6 +82,7 @@ import { SignUpService } from "./services/sign-up.service";
     MatSidenavModule,
     MatListModule,
     MatExpansionModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
