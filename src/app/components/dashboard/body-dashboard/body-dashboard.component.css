@@ -1,0 +1,19 @@
+.dash-body{
+  background-color: antiquewhite;
+  padding-bottom: 180px;;
+}
+
+.dash-body-name{
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
+  padding-Bottom: 5px;
+}
+
+.first-card{
+  margin-left: 0%;
+}
+
+.card-decks{
+  margin-left: 100px;
+}
